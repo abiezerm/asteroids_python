@@ -1,5 +1,5 @@
 # asteroids_python
-asteroids game with python and OOP, all credits to realpython turoial 
+asteroids game with python and OOP, all credits to realpython tutorial 
 
 
 ## How to run
