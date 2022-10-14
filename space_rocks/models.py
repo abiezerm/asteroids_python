@@ -5,6 +5,7 @@ from utils import get_random_velocity, load_sound, load_sprite, wrap_position
 
 UP = Vector2(0, -1)
 
+
 class GameObject:
     def __init__(self, position, sprite, velocity):
         self.position = Vector2(position)

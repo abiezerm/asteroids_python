@@ -3,6 +3,7 @@ import pygame
 from models import Asteroid, Spaceship
 from utils import get_random_position,load_sprite, print_text
 
+
 class SpaceRocks:
     MIN_ASTEROID_DISTANCE = 250
     
@@ -35,7 +36,8 @@ class SpaceRocks:
             self._process_game_logic()
             self._draw()
             
-    def _init_pygame(self):
+    @staticmethod
+    def _init_pygame():
         pygame.init()
         pygame.display.set_caption("Space Rocks")
         
@@ -97,7 +99,6 @@ class SpaceRocks:
             self.message = "You won!"
 
     def _draw(self):
-        #self.screen.fill((0, 0, 255))
         self.screen.blit(self.background, (0, 0))
         
         for game_object in self._get_game_objects():
@@ -106,6 +107,5 @@ class SpaceRocks:
         if self.message:
             print_text(self.screen, self.message, self.font)
 
-            
         pygame.display.flip()
         self.clock.tick(60)
